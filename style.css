@@ -410,3 +410,44 @@ em { color: var(--orange); font-style: normal; }
   }
   .reveal { opacity: 1; transform: none; }
 }
+
+
+/* CATÁLOGO DE SERVIÇOS */
+.services { background: linear-gradient(180deg, #030b17, #071426); }
+.service-accordion { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.service-group { min-width: 0; border: 1px solid var(--line); border-radius: 10px; background: linear-gradient(180deg, var(--panel-2), #071221); overflow: hidden; transition: border-color .25s ease, transform .25s ease; }
+.service-group:hover { border-color: rgba(255,106,25,.5); }
+.service-group[open] { grid-column: 1 / -1; border-color: rgba(62,166,255,.45); }
+.service-group summary { list-style: none; display: flex; align-items: center; gap: 16px; min-height: 112px; padding: 22px 24px; cursor: pointer; position: relative; }
+.service-group summary::-webkit-details-marker { display: none; }
+.service-group summary::after { content: '+'; margin-left: auto; color: var(--orange); font: 700 1.8rem/1 Montserrat, sans-serif; transition: transform .25s ease; }
+.service-group[open] summary::after { transform: rotate(45deg); }
+.service-icon { width: 52px; height: 52px; display: grid; place-items: center; flex: 0 0 auto; border: 1px solid rgba(62,166,255,.35); border-radius: 10px; background: rgba(11,122,217,.08); font-size: 1.6rem; }
+.service-group summary span:nth-child(2) { display: flex; flex-direction: column; gap: 5px; }
+.service-group summary strong { font: 800 1rem Montserrat, sans-serif; text-transform: uppercase; }
+.service-group summary small { color: #94a5b9; line-height: 1.45; }
+.service-content { padding: 0 24px 26px 92px; border-top: 1px solid var(--line); }
+.service-content > p { margin: 20px 0; color: #b8c4d3; }
+.service-content h3 { margin: 22px 0 10px; color: var(--cyan); font-size: .9rem; text-transform: uppercase; }
+.service-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px 24px; list-style: none; }
+.service-list li { position: relative; padding-left: 18px; color: #d7dee8; font-size: .86rem; }
+.service-list li::before { content: '•'; position: absolute; left: 0; color: var(--orange); font-weight: 900; }
+.service-cta { display: inline-flex; margin-top: 24px; padding: 11px 16px; border: 1px solid var(--orange); border-radius: 5px; color: var(--orange); font-size: .7rem; font-weight: 800; letter-spacing: .04em; text-decoration: none; text-transform: uppercase; transition: .25s ease; }
+.service-cta:hover { background: var(--orange); color: var(--white); }
+.about-signature { margin-top: 30px; padding: 24px; border-left: 3px solid var(--orange); background: rgba(255,255,255,.025); }
+.about-signature strong { display: block; font: 800 1rem Montserrat, sans-serif; text-transform: uppercase; }
+.about-signature span { display: block; margin-top: 6px; color: #9eb0c4; }
+
+@media (max-width: 900px) {
+  .service-accordion { grid-template-columns: 1fr; }
+  .service-group[open] { grid-column: auto; }
+}
+
+@media (max-width: 700px) {
+  .service-group summary { min-height: 96px; padding: 18px; }
+  .service-icon { width: 44px; height: 44px; font-size: 1.35rem; }
+  .service-group summary strong { font-size: .88rem; }
+  .service-group summary small { font-size: .72rem; }
+  .service-content { padding: 0 18px 22px; }
+  .service-list { grid-template-columns: 1fr; }
+}
