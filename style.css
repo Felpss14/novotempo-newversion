@@ -242,6 +242,26 @@ em {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+
+/* LOGO OFICIAL NO CABEÇALHO */
+.brand-logo {
+  line-height: 0;
+}
+
+.brand-logo img {
+  width: clamp(178px, 16vw, 232px);
+  height: auto;
+  max-height: 64px;
+  object-fit: contain;
+}
+
+@media (max-width: 700px) {
+  .brand-logo img {
+    width: 174px;
+    max-height: 58px;
+  }
+}
+
 /* HERO EM CARROSSEL */
 .hero {
   position: relative;
@@ -1311,7 +1331,7 @@ em {
 
 .sipat-card-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
 }
 
@@ -1406,12 +1426,6 @@ em {
 @media (max-width: 900px) {
   .sipat-card-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .sipat-card:last-child {
-    grid-column: 1 / -1;
-    width: min(100%, 560px);
-    justify-self: center;
   }
 }
 
