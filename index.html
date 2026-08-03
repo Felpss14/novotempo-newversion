@@ -23,7 +23,6 @@
 
       <nav class="main-nav" aria-label="Navegação principal">
         <a href="#inicio">Início</a>
-        <a href="#programas">Programas</a>
         <a href="#servicos">Serviços</a>
         <a href="#sobre">Sobre Nós</a>
         <a href="#galeria">Galeria</a>
@@ -38,7 +37,8 @@
   <main>
     <section class="hero hero-carousel" aria-label="Destaques da Novo Tempo Eventos">
       <div class="hero-track">
-        <article class="hero-slide is-active" style="--hero-bg: url('imagens-sipat/img1.png')">
+        <article class="hero-slide is-active">
+          <div class="hero-photo"><img src="imagens-sipat/banners/banner1.jpg" alt="Foto do banner 1" loading="lazy"></div>
           <div class="hero-shape" aria-hidden="true"></div>
           <div class="container hero-grid">
             <div class="hero-copy">
@@ -58,7 +58,8 @@
           </div>
         </article>
 
-        <article class="hero-slide hero-slide-center" style="--hero-bg: url('')">
+        <article class="hero-slide hero-slide-center">
+          <div class="hero-photo"><img src="imagens-sipat/banners/banner2.jpg" alt="Foto do banner 2" loading="lazy"></div>
           <div class="container hero-grid">
             <div class="hero-copy">
               <span class="eyebrow">Team Building • Integração</span>
@@ -76,7 +77,7 @@
         </article>
 
         <article class="hero-slide hero-slide-split">
-          <div class="hero-split-media" role="img" aria-label="Equipe participando de uma experiência corporativa"></div>
+          <div class="hero-split-media"><img src="imagens-sipat/banners/banner3.jpg" alt="Foto do banner 3" loading="lazy"></div>
           <div class="hero-split-content">
             <div class="hero-copy hero-split-copy">
               <span class="eyebrow">Soluções 100% personalizadas</span>
@@ -102,26 +103,6 @@
       <div class="hero-progress" aria-hidden="true"><span></span></div>
     </section>
 
-    <section class="section programs" id="programas">
-      <div class="container">
-        <div class="section-heading compact">
-          <span class="eyebrow">Soluções corporativas</span>
-          <h2>Nossos <em>programas</em></h2>
-          <p>Projetos personalizados de acordo com o perfil, a necessidade e os objetivos de cada organização.</p>
-        </div>
-
-        <div class="program-grid">
-          <article class="program-card"><span class="card-icon">👥</span><h3>SIPAT</h3><p>Programas completos e personalizados para fortalecer a cultura de prevenção.</p><a href="#contato">Saiba mais</a></article>
-          <article class="program-card"><span class="card-icon">💬</span><h3>Palestras</h3><p>Conteúdos dinâmicos sobre segurança, saúde, comportamento e qualidade de vida.</p><a href="#contato">Saiba mais</a></article>
-          <article class="program-card"><span class="card-icon">🧩</span><h3>Treinamentos</h3><p>Conhecimento prático para transformar informação em atitude no dia a dia.</p><a href="#contato">Saiba mais</a></article>
-          <article class="program-card"><span class="card-icon">🎭</span><h3>Ações interativas</h3><p>Abordagens criativas, leves e marcantes para aumentar o envolvimento da equipe.</p><a href="#contato">Saiba mais</a></article>
-          <article class="program-card"><span class="card-icon">🏃</span><h3>Qualidade de vida</h3><p>Atividades voltadas ao bem-estar, saúde e desenvolvimento humano.</p><a href="#contato">Saiba mais</a></article>
-          <article class="program-card"><span class="card-icon">🎤</span><h3>Eventos corporativos</h3><p>Planejamento e execução com atendimento personalizado, pontualidade e excelência.</p><a href="#contato">Saiba mais</a></article>
-        </div>
-      </div>
-    </section>
-
-
     <section class="section sipat-talks" id="palestras-sipat">
       <div class="container">
         <div class="section-heading compact">
@@ -131,16 +112,8 @@
         </div>
 
         <div class="event-card-grid">
-          <article class="event-card" data-card-carousel>
-            <div class="event-card-carousel" tabindex="0" aria-label="Galeria de Palestra Show Interativa">
-              <div class="event-card-track">
-                  <div class="event-card-slide"><img src="" alt="Palestra Show Interativa — imagem 1" loading="lazy"></div>
-                  <div class="event-card-slide"><img src="" alt="Palestra Show Interativa — imagem 2" loading="lazy"></div>
-              </div>
-              <button class="event-card-arrow event-card-prev" type="button" aria-label="Imagem anterior">‹</button>
-              <button class="event-card-arrow event-card-next" type="button" aria-label="Próxima imagem">›</button>
-              <div class="event-card-dots" aria-label="Selecionar imagem"><button type="button" aria-label="Ver imagem 1" data-card-dot="0"></button><button type="button" aria-label="Ver imagem 2" data-card-dot="1"></button><button type="button" aria-label="Ver imagem 3" data-card-dot="2"></button></div>
-            </div>
+          <article class="event-card">
+            <div class="event-card-media"><img src="" alt="Palestra Show Interativa" loading="lazy"></div>
             <div class="event-card-content">
               <span class="sipat-card-tag">Interação</span>
               <h3>Palestra Show Interativa</h3>
@@ -153,16 +126,8 @@
             </div>
           </article>
 
-          <article class="event-card" data-card-carousel>
-            <div class="event-card-carousel" tabindex="0" aria-label="Galeria de Palestra Teatral">
-              <div class="event-card-track">
-                  <div class="event-card-slide"><img src="" alt="Palestra Teatral — imagem 1" loading="lazy"></div>
-                  <div class="event-card-slide"><img src="" alt="Palestra Teatral — imagem 2" loading="lazy"></div>
-              </div>
-              <button class="event-card-arrow event-card-prev" type="button" aria-label="Imagem anterior">‹</button>
-              <button class="event-card-arrow event-card-next" type="button" aria-label="Próxima imagem">›</button>
-              <div class="event-card-dots" aria-label="Selecionar imagem"><button type="button" aria-label="Ver imagem 1" data-card-dot="0"></button><button type="button" aria-label="Ver imagem 2" data-card-dot="1"></button><button type="button" aria-label="Ver imagem 3" data-card-dot="2"></button></div>
-            </div>
+          <article class="event-card">
+            <div class="event-card-media"><img src="" alt="Palestra Teatral" loading="lazy"></div>
             <div class="event-card-content">
               <span class="sipat-card-tag">Dinamismo</span>
               <h3>Palestra Teatral</h3>
@@ -175,16 +140,8 @@
             </div>
           </article>
 
-          <article class="event-card" data-card-carousel>
-            <div class="event-card-carousel" tabindex="0" aria-label="Galeria de Comportamento Seguro">
-              <div class="event-card-track">
-                  <div class="event-card-slide"><img src="" alt="Comportamento Seguro — imagem 1" loading="lazy"></div>
-                  <div class="event-card-slide"><img src="" alt="Comportamento Seguro — imagem 2" loading="lazy"></div>
-              </div>
-              <button class="event-card-arrow event-card-prev" type="button" aria-label="Imagem anterior">‹</button>
-              <button class="event-card-arrow event-card-next" type="button" aria-label="Próxima imagem">›</button>
-              <div class="event-card-dots" aria-label="Selecionar imagem"><button type="button" aria-label="Ver imagem 1" data-card-dot="0"></button><button type="button" aria-label="Ver imagem 2" data-card-dot="1"></button><button type="button" aria-label="Ver imagem 3" data-card-dot="2"></button></div>
-            </div>
+          <article class="event-card">
+            <div class="event-card-media"><img src="" alt="Comportamento Seguro" loading="lazy"></div>
             <div class="event-card-content">
               <span class="sipat-card-tag">Conscientização</span>
               <h3>Comportamento Seguro</h3>
@@ -197,16 +154,8 @@
             </div>
           </article>
 
-          <article class="event-card" data-card-carousel>
-            <div class="event-card-carousel" tabindex="0" aria-label="Galeria de Saúde Mental e NR-1">
-              <div class="event-card-track">
-                  <div class="event-card-slide"><img src="" alt="Saúde Mental e NR-1 — imagem 1" loading="lazy"></div>
-                  <div class="event-card-slide"><img src="" alt="Saúde Mental e NR-1 — imagem 2" loading="lazy"></div>
-              </div>
-              <button class="event-card-arrow event-card-prev" type="button" aria-label="Imagem anterior">‹</button>
-              <button class="event-card-arrow event-card-next" type="button" aria-label="Próxima imagem">›</button>
-              <div class="event-card-dots" aria-label="Selecionar imagem"><button type="button" aria-label="Ver imagem 1" data-card-dot="0"></button><button type="button" aria-label="Ver imagem 2" data-card-dot="1"></button><button type="button" aria-label="Ver imagem 3" data-card-dot="2"></button></div>
-            </div>
+          <article class="event-card">
+            <div class="event-card-media"><img src="" alt="Saúde Mental e NR-1" loading="lazy"></div>
             <div class="event-card-content">
               <span class="sipat-card-tag">Bem-estar</span>
               <h3>Saúde Mental e NR-1</h3>
@@ -219,16 +168,8 @@
             </div>
           </article>
 
-          <article class="event-card" data-card-carousel>
-            <div class="event-card-carousel" tabindex="0" aria-label="Galeria de Team Building">
-              <div class="event-card-track">
-                  <div class="event-card-slide"><img src="" alt="Team Building — imagem 1" loading="lazy"></div>
-                  <div class="event-card-slide"><img src="" alt="Team Building — imagem 2" loading="lazy"></div>
-              </div>
-              <button class="event-card-arrow event-card-prev" type="button" aria-label="Imagem anterior">‹</button>
-              <button class="event-card-arrow event-card-next" type="button" aria-label="Próxima imagem">›</button>
-              <div class="event-card-dots" aria-label="Selecionar imagem"><button type="button" aria-label="Ver imagem 1" data-card-dot="0"></button><button type="button" aria-label="Ver imagem 2" data-card-dot="1"></button><button type="button" aria-label="Ver imagem 3" data-card-dot="2"></button></div>
-            </div>
+          <article class="event-card">
+            <div class="event-card-media"><img src="" alt="Team Building" loading="lazy"></div>
             <div class="event-card-content">
               <span class="sipat-card-tag">Integração</span>
               <h3>Team Building</h3>
@@ -241,16 +182,8 @@
             </div>
           </article>
 
-          <article class="event-card" data-card-carousel>
-            <div class="event-card-carousel" tabindex="0" aria-label="Galeria de Game Show da Segurança">
-              <div class="event-card-track">
-                  <div class="event-card-slide"><img src="" alt="Game Show da Segurança — imagem 1" loading="lazy"></div>
-                  <div class="event-card-slide"><img src="" alt="Game Show da Segurança — imagem 2" loading="lazy"></div>
-              </div>
-              <button class="event-card-arrow event-card-prev" type="button" aria-label="Imagem anterior">‹</button>
-              <button class="event-card-arrow event-card-next" type="button" aria-label="Próxima imagem">›</button>
-              <div class="event-card-dots" aria-label="Selecionar imagem"><button type="button" aria-label="Ver imagem 1" data-card-dot="0"></button><button type="button" aria-label="Ver imagem 2" data-card-dot="1"></button><button type="button" aria-label="Ver imagem 3" data-card-dot="2"></button></div>
-            </div>
+          <article class="event-card">
+            <div class="event-card-media"><img src="" alt="Game Show da Segurança" loading="lazy"></div>
             <div class="event-card-content">
               <span class="sipat-card-tag">Participação</span>
               <h3>Game Show da Segurança</h3>
@@ -263,16 +196,8 @@
             </div>
           </article>
 
-          <article class="event-card" data-card-carousel>
-            <div class="event-card-carousel" tabindex="0" aria-label="Galeria de Túnel da Segurança">
-              <div class="event-card-track">
-                  <div class="event-card-slide"><img src="" alt="Túnel da Segurança — imagem 1" loading="lazy"></div>
-                  <div class="event-card-slide"><img src="" alt="Túnel da Segurança — imagem 2" loading="lazy"></div>
-              </div>
-              <button class="event-card-arrow event-card-prev" type="button" aria-label="Imagem anterior">‹</button>
-              <button class="event-card-arrow event-card-next" type="button" aria-label="Próxima imagem">›</button>
-              <div class="event-card-dots" aria-label="Selecionar imagem"><button type="button" aria-label="Ver imagem 1" data-card-dot="0"></button><button type="button" aria-label="Ver imagem 2" data-card-dot="1"></button><button type="button" aria-label="Ver imagem 3" data-card-dot="2"></button></div>
-            </div>
+          <article class="event-card">
+            <div class="event-card-media"><img src="" alt="Túnel da Segurança" loading="lazy"></div>
             <div class="event-card-content">
               <span class="sipat-card-tag">Experiência</span>
               <h3>Túnel da Segurança</h3>
@@ -285,16 +210,8 @@
             </div>
           </article>
 
-          <article class="event-card" data-card-carousel>
-            <div class="event-card-carousel" tabindex="0" aria-label="Galeria de Espaço Saúde e Qualidade de Vida">
-              <div class="event-card-track">
-                  <div class="event-card-slide"><img src="" alt="" loading="lazy"></div>
-                  <div class="event-card-slide"><img src="" alt="" loading="lazy"></div>
-              </div>
-              <button class="event-card-arrow event-card-prev" type="button" aria-label="Imagem anterior">‹</button>
-              <button class="event-card-arrow event-card-next" type="button" aria-label="Próxima imagem">›</button>
-              <div class="event-card-dots" aria-label="Selecionar imagem"><button type="button" aria-label="Ver imagem 1" data-card-dot="0"></button><button type="button" aria-label="Ver imagem 2" data-card-dot="1"></button><button type="button" aria-label="Ver imagem 3" data-card-dot="2"></button></div>
-            </div>
+          <article class="event-card">
+            <div class="event-card-media"><img src="" alt="Espaço Saúde e Qualidade de Vida" loading="lazy"></div>
             <div class="event-card-content">
               <span class="sipat-card-tag">Cuidado</span>
               <h3>Espaço Saúde e Qualidade de Vida</h3>
@@ -307,16 +224,8 @@
             </div>
           </article>
 
-          <article class="event-card" data-card-carousel>
-            <div class="event-card-carousel" tabindex="0" aria-label="Galeria de SIPAT Completa">
-              <div class="event-card-track">
-                  <div class="event-card-slide"><img src="" alt="" loading="lazy"></div>
-                  <div class="event-card-slide"><img src="" alt="" loading="lazy"></div>
-              </div>
-              <button class="event-card-arrow event-card-prev" type="button" aria-label="Imagem anterior">‹</button>
-              <button class="event-card-arrow event-card-next" type="button" aria-label="Próxima imagem">›</button>
-              <div class="event-card-dots" aria-label="Selecionar imagem"><button type="button" aria-label="Ver imagem 1" data-card-dot="0"></button><button type="button" aria-label="Ver imagem 2" data-card-dot="1"></button><button type="button" aria-label="Ver imagem 3" data-card-dot="2"></button></div>
-            </div>
+          <article class="event-card">
+            <div class="event-card-media"><img src="" alt="SIPAT Completa" loading="lazy"></div>
             <div class="event-card-content">
               <span class="sipat-card-tag">Personalização</span>
               <h3>SIPAT Completa</h3>

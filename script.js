@@ -86,11 +86,6 @@ document.addEventListener('DOMContentLoaded', () => {
     render();
   }
 
-  document.querySelectorAll('[data-card-carousel]').forEach(card => setupCarousel(card, {
-    track: '.event-card-track', slide: '.event-card-slide', prev: '.event-card-prev',
-    next: '.event-card-next', dots: '.event-card-dots'
-  }));
-
   const gallery = document.querySelector('.carousel');
   if (gallery) setupCarousel(gallery, {
     track: '.carousel-track', slide: '.slide', prev: '.prev', next: '.next',
@@ -112,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: .12 });
 
-  document.querySelectorAll('.program-card, .event-card, .service-group, .why-grid article, .testimonial-grid blockquote')
+  document.querySelectorAll('.event-card, .service-group, .why-grid article, .testimonial-grid blockquote')
     .forEach(element => {
       element.classList.add('reveal');
       revealObserver.observe(element);
