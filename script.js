@@ -92,12 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
     dots: '.carousel-dots', autoplay: 6500
   });
 
-  const hero = document.querySelector('.hero-carousel');
-  if (hero) setupCarousel(hero, {
-    track: '.hero-track', slide: '.hero-slide', prev: '.hero-prev', next: '.hero-next',
-    dots: '.hero-dots', autoplay: 5000
-  });
-
   const revealObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {

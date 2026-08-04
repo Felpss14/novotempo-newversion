@@ -262,30 +262,26 @@ em {
   }
 }
 
-/* HERO EM CARROSSEL */
+/* HERO — BANNER ÚNICO */
 .hero {
   position: relative;
   min-height: 690px;
   overflow: hidden;
-  isolation: isolate;
   background: var(--navy);
 }
 
-.hero-track { position: relative; min-height: 690px; }
-
-.hero-slide {
+.hero-photo {
   position: absolute;
   inset: 0;
-  min-height: 690px;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  overflow: hidden;
-  transform: scale(1.035);
-  transition: opacity .8s ease, visibility .8s ease, transform 1.2s ease;
+  z-index: 0;
+  background-color: var(--panel);
+  background-image: var(--slide-bg, none);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.hero-slide::before {
+.hero-overlay {
   content: '';
   position: absolute;
   inset: 0;
@@ -295,55 +291,31 @@ em {
     linear-gradient(0deg, #030b17 0%, transparent 42%);
 }
 
-.hero-photo {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background: var(--panel);
-}
-
-.hero-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-slide.is-active {
+.hero-inner {
   position: relative;
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transform: scale(1);
   z-index: 2;
+  min-height: 690px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.hero-grid { position: relative; z-index: 2; min-height: 690px; display: grid; align-items: center; }
-.hero-copy { width: min(670px,100%); padding: 72px 0; }
-.hero-copy h1 { margin: 18px 0 20px; font-size: clamp(2.1rem,3.4vw,3.6rem); line-height:1.04; letter-spacing:-.03em; text-transform:uppercase; }
-.hero-copy p { max-width:610px; color:#d0d8e4; font-size:1.04rem; }
-.hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
+.hero-copy { width: min(670px,100%); padding: 72px 0; text-align: left; }
+.hero-copy .eyebrow { justify-content: flex-start; }
+.hero-copy h1 { margin: 18px 0 20px; font-size: clamp(2.1rem,3.4vw,3.6rem); line-height:1.04; letter-spacing:-.03em; text-transform:uppercase; text-align:left; }
+.hero-copy p { max-width:610px; color:#d0d8e4; font-size:1.04rem; text-align:left; }
+.hero-actions { display:flex; flex-wrap:wrap; justify-content:flex-start; gap:12px; margin-top:30px; }
 .button { min-height:50px; display:inline-flex; align-items:center; justify-content:center; padding:0 22px; border-radius:5px; font-size:.77rem; font-weight:800; letter-spacing:.04em; text-decoration:none; text-transform:uppercase; transition:transform .25s ease,filter .25s ease; }
 .button:hover { transform:translateY(-3px); filter:brightness(1.08); }
 .button-orange { background:var(--orange); box-shadow:0 12px 28px rgba(255,106,25,.22); }
 .button-blue { background:var(--blue); box-shadow:0 12px 28px rgba(11,122,217,.22); }
-.hero-benefits { display:grid; grid-template-columns:repeat(3,1fr); max-width:680px; margin-top:36px; padding-top:22px; border-top:1px solid var(--line); }
+.hero-benefits { display:grid; grid-template-columns:repeat(3,1fr); max-width:680px; margin-top:36px; padding-top:22px; border-top:1px solid var(--line); text-align:left; }
 .hero-benefits>div { display:flex; align-items:center; gap:10px; padding:0 18px; border-right:1px solid var(--line); }
 .hero-benefits>div:first-child { padding-left:0; }
 .hero-benefits>div:last-child { border:0; }
 .benefit-icon { width:34px; height:34px; display:grid; place-items:center; flex:0 0 auto; border:1px solid var(--orange); border-radius:6px; color:var(--orange); font-weight:900; }
 .hero-benefits p { color:#9fb0c4; font-size:.76rem; line-height:1.35; }
 .hero-benefits strong { display:block; color:var(--white); text-transform:uppercase; }
-.hero-arrow { position:absolute; z-index:8; top:50%; width:48px; height:48px; transform:translateY(-50%); border:1px solid rgba(255,255,255,.28); border-radius:50%; background:rgba(3,11,23,.64); color:#fff; font-size:2rem; cursor:pointer; backdrop-filter:blur(8px); transition:.25s ease; }
-.hero-arrow:hover { background:var(--orange); border-color:var(--orange); }
-.hero-prev { left:20px; }
-.hero-next { right:20px; }
-.hero-dots { position:absolute; z-index:8; left:50%; bottom:27px; display:flex; gap:9px; transform:translateX(-50%); }
-.hero-dots button { width:9px; height:9px; border:0; border-radius:99px; background:rgba(255,255,255,.42); cursor:pointer; transition:.25s ease; }
-.hero-dots button.active { width:30px; background:var(--orange); }
-.hero-progress { position:absolute; z-index:8; left:0; right:0; bottom:0; height:3px; background:rgba(255,255,255,.08); }
-.hero-progress span { display:block; width:0; height:100%; background:var(--orange); }
-.hero-progress span.running { animation:heroProgress 5s linear forwards; }
-@keyframes heroProgress { from { width:0; } to { width:100%; } }
 
 /* SEÇÕES */
 .section-heading {
@@ -723,17 +695,17 @@ em {
   }
 
   .hero {
-    min-height: auto;
+    min-height: 720px;
     background: var(--navy);
   }
 
-  .hero-grid {
-    min-height: 680px;
-    align-items: end;
+  .hero-inner {
+    min-height: 720px;
+    align-items: flex-end;
   }
 
   .hero-copy {
-    padding: 110px 0 58px;
+    padding: 105px 0 60px;
   }
 
   .hero-copy h1 {
@@ -1073,20 +1045,6 @@ em {
     grid-template-columns: 1fr;
   }
 }
-/* RESPONSIVIDADE DO HERO CARROSSEL */
-@media (max-width: 700px) {
-  .hero, .hero-track, .hero-slide { min-height: 720px; }
-  .hero-grid { min-height: 720px; align-items: end; }
-  .hero-copy { padding: 105px 0 90px; }
-  .hero-copy h1 { font-size: clamp(1.5rem,7.5vw,2.3rem); line-height:1.12; overflow-wrap:anywhere; }
-  .hero-actions, .hero-actions .button { width:100%; }
-  .hero-benefits { grid-template-columns:1fr; }
-  .hero-benefits>div, .hero-benefits>div:first-child { padding:10px 0; border-right:0; border-bottom:1px solid var(--line); }
-  .hero-arrow { top:auto; bottom:18px; width:42px; height:42px; transform:none; }
-  .hero-prev { left:14px; } .hero-next { right:14px; }
-  .hero-dots { bottom:34px; }
-}
-@media (prefers-reduced-motion: reduce) { .hero-progress { display:none; } }
 
 
 /* CARDS DE EVENTOS SIPAT */
