@@ -97,14 +97,14 @@ em {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(3, 11, 23, 0.82);
+  background: rgb(0, 0, 0);
   border-bottom: 1px solid transparent;
   backdrop-filter: blur(14px);
   transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .site-header.scrolled {
-  background: rgba(3, 11, 23, 0.97);
+  background: rgb(0, 0, 0);
   border-color: var(--line);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
 }
@@ -316,6 +316,37 @@ em {
 .benefit-icon { width:34px; height:34px; display:grid; place-items:center; flex:0 0 auto; border:1px solid var(--orange); border-radius:6px; color:var(--orange); font-weight:900; }
 .hero-benefits p { color:#9fb0c4; font-size:.76rem; line-height:1.35; }
 .hero-benefits strong { display:block; color:var(--white); text-transform:uppercase; }
+
+    .event-card-description {
+      display: grid;
+      gap: .7rem;
+    }
+
+    .event-card-description p {
+      margin: 0;
+    }
+
+    .event-card-description h4 {
+      margin: .35rem 0 0;
+      font-size: 1rem;
+      line-height: 1.35;
+    }
+
+    .event-card-list {
+      margin: 0;
+      padding-left: 1.2rem;
+      display: grid;
+      gap: .35rem;
+    }
+
+    .event-card-content {
+      height: 100%;
+    }
+
+    .event-card-content>a {
+      margin-top: auto;
+    }
+
 
 /* SEÇÕES */
 .section-heading {
