@@ -92,7 +92,6 @@ em {
   background: var(--orange);
 }
 
-/* HEADER */
 .site-header {
   position: sticky;
   top: 0;
@@ -242,8 +241,6 @@ em {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-
-/* LOGO OFICIAL NO CABEÇALHO */
 .brand-logo {
   line-height: 0;
 }
@@ -262,7 +259,6 @@ em {
   }
 }
 
-/* HERO — BANNER ÚNICO */
 .hero {
   position: relative;
   min-height: 690px;
@@ -444,8 +440,6 @@ em {
   margin-top: auto;
 }
 
-
-/* SEÇÕES */
 .section-heading {
   max-width: 780px;
   margin: 0 auto 42px;
@@ -503,7 +497,6 @@ em {
   line-height: 1.5;
 }
 
-/* CARROSSEL */
 .carousel {
   position: relative;
   width: 100%;
@@ -735,7 +728,6 @@ em {
   text-align: right;
 }
 
-/* ANIMAÇÕES */
 .reveal {
   opacity: 0;
   transform: translateY(22px);
@@ -747,7 +739,6 @@ em {
   transform: none;
 }
 
-/* TABLET / MENU MOBILE */
 @media (max-width: 1000px) {
 
   .main-nav,
@@ -972,8 +963,6 @@ em {
   }
 }
 
-
-/* CATÁLOGO DE SERVIÇOS */
 .services {
   background: linear-gradient(180deg, #030b17, #071426);
 }
@@ -1174,8 +1163,6 @@ em {
   }
 }
 
-
-/* CARDS DE EVENTOS SIPAT */
 .sipat-talks {
   background: linear-gradient(180deg, #071426, #030b17);
 }
@@ -1306,8 +1293,6 @@ em {
   }
 }
 
-
-/* CARDS DE EXPERIÊNCIAS — área de imagem editável */
 .service-content {
   padding: 22px 24px 26px;
 }
@@ -1390,8 +1375,6 @@ em {
   }
 }
 
-
-/* CLIENTES: faixa infinita de logotipos */
 .clients-section {
   padding-bottom: 56px;
   overflow: hidden;
@@ -1479,7 +1462,6 @@ em {
   to { transform: translateX(0); }
 }
 
-/* VÍDEOS DO YOUTUBE: três espaços responsivos */
 .videos-section {
   padding-top: 56px;
   background: var(--navy-2);
@@ -1553,8 +1535,6 @@ em {
   .clients-group[aria-hidden="true"] { display: none; }
 }
 
-
-/* CAMPANHAS MENSAIS: cartões com cores de referência e layout responsivo */
 .campaigns-section { padding-top: 58px; padding-bottom: 64px; background: var(--navy); }
 .campaigns-heading { max-width: 760px; margin: 0 auto 30px; text-align: center; }
 .campaigns-heading p { color: var(--muted); margin: 12px auto 0; }
@@ -1569,4 +1549,3 @@ em {
 @media (max-width: 720px) { .campaigns-section { padding-top: 46px; padding-bottom: 48px; } .campaigns-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; } .campaign-card { padding: 17px 14px; min-height: 160px; } .campaign-card h3 { font-size: .9rem; } }
 @media (max-width: 420px) { .campaigns-grid { grid-template-columns: minmax(0, 1fr); } .campaign-card { min-height: auto; } }
 @media (prefers-reduced-motion: reduce) { .campaign-card { transition: none; } .campaign-card:hover { transform: none; } }
-
